@@ -1,0 +1,50 @@
+p {   /* Селектор тегу - 0001 */
+    color: blue;
+}
+
+.common { /* Селектор класу - 0010 */
+    color: green;
+}
+
+#paragraph {  /* Селектор за id - 0100 */
+    color: red;
+}
+
+/*  Інлайнові стилі - 1000 */
+
+
+.common {
+   /* color: purple;  Фіолетовий перезапише зелений */
+   /* 
+   color: #aaffaa; --- hexadecimal, 16-дковий формат 
+   color: rgb(189, 127, 12);  Функція rgb() 
+   color: rgba(189, 127, 12, 0.627);
+   */
+}
+
+
+/*
+usual phrase in three words
+
+usual-phrase-in-three-words - kebab-case
+usualPhraseInThreeWords - camelCase
+usual_phrase_in_three_words - snake_case
+
+*/
+
+p {
+    font-size: 30px;
+    text-align: justify;
+}
+
+span {
+    font-size: 40px;
+    color: violet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pink-text {
+    color: pink;
+}
