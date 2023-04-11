@@ -1,0 +1,17 @@
+
+.logo {
+    width: 65px;
+    height: 65px;
+}
+
+nav {
+    display: inline;
+}
+
+.menu-list {
+    display: inherit;
+}
+
+.menu-item {
+    display: inherit;
+}

@@ -1,50 +1,52 @@
-p {   /* Селектор тегу - 0001 */
-    color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(41, 13, 13);
+    background: rgba(61, 61, 61, 0.421);
+    /* background: linear-gradient(90deg, rgba(142,153,251,1) 16%, rgba(226,118,240,1) 49%, rgba(81,89,223,1) 100%); */
+    background-image: url('./img/pexels-johannes-plenio-1423600.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
 }
 
-.common { /* Селектор класу - 0010 */
-    color: green;
-}
+header {
 
-#paragraph {  /* Селектор за id - 0100 */
-    color: red;
-}
-
-/*  Інлайнові стилі - 1000 */
-
-
-.common {
-   /* color: purple;  Фіолетовий перезапише зелений */
-   /* 
-   color: #aaffaa; --- hexadecimal, 16-дковий формат 
-   color: rgb(189, 127, 12);  Функція rgb() 
-   color: rgba(189, 127, 12, 0.627);
-   */
 }
 
 
-/*
-usual phrase in three words
+.cat-avatar {
+    width: 200px;
+    height: 200px;
+  
+    /* border-color: red;
+    border-style: dashed;
+    border-width: 2px; */
+    border: 2px dashed red;    
+    border-radius: 50%;
+    /*
+    solid - суцільна лінія
+    dashed - пунктир
+    dotted - точки
+    double - подвійна
+    groove - об'ємна рамка
+    */
 
-usual-phrase-in-three-words - kebab-case
-usualPhraseInThreeWords - camelCase
-usual_phrase_in_three_words - snake_case
+    /*
+    object-fit: cover; --- елемент зберігає пропорції, але "обрізає" зайве
+    object-position: right; --- позиція картинки така, щоб захопити все справа
+    */
+}
 
-*/
+.cat-name {
+    display: inline
+}
 
-p {
-    font-size: 30px;
-    text-align: justify;
+.cat-position {
+    display: block;
 }
 
 span {
-    font-size: 40px;
-    color: violet;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.pink-text {
-    color: pink;
+    color: blue;
 }
