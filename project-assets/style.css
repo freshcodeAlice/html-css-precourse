@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 .logo {
     width: 65px;
@@ -5,13 +11,29 @@
 }
 
 nav {
-    display: inline;
+    display: inline-block;
 }
 
-.menu-list {
-    display: inherit;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.menu-item {
+.menu-list, .menu-item {
     display: inherit;
+    font-size: 20px;
+}
+
+
+.menu-button {
+padding: 0.6em 1.5em;
+background-color: #7AE5FD;
+border-radius: 20px;
+text-transform: uppercase;
+}
+
+.first-screen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F1FDFF;
 }

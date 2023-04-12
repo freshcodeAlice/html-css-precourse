@@ -1,52 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
-body {
-    font-family: 'Roboto Mono', monospace;
-    color: rgb(41, 13, 13);
-    background: rgba(61, 61, 61, 0.421);
-    /* background: linear-gradient(90deg, rgba(142,153,251,1) 16%, rgba(226,118,240,1) 49%, rgba(81,89,223,1) 100%); */
-    background-image: url('./img/pexels-johannes-plenio-1423600.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: multiply;
-}
-
-header {
-
-}
-
-
-.cat-avatar {
+div {
+    border: 2px solid black;
+    padding: 10px 20px;
     width: 200px;
     height: 200px;
-  
-    /* border-color: red;
-    border-style: dashed;
-    border-width: 2px; */
-    border: 2px dashed red;    
-    border-radius: 50%;
+    /* overflow: scroll; */
+    overflow-y: scroll;
+    overflow-x: auto;
+
+    margin: 20px;
     /*
-    solid - суцільна лінія
-    dashed - пунктир
-    dotted - точки
-    double - подвійна
-    groove - об'ємна рамка
+    Варіант 1: чотири значення
+    padding: число1 число2 число3 число4
+    padding: 10px 10px 20px 30px;
+    число1 - padding-top
+    число2 - padding-right
+    число3 - padding-bottom 
+    число4 - padding-left
+
+    Варіант 2: три значення
+    padding: число1 число2 число3 
+    padding: 10px 20px 30px;
+    число1 - padding-top
+    число2 - padding-right & padding-left
+    число3 - padding-bottom
+
+    Варіант 3: два значення
+    padding: число1 число2
+    число1 - вертикаль (top & bottom)
+    число2 - горизонталь (left & right)
+
+    Варіант 4: одне значення
+    padding: число1
+    однаковий відступ зі всіх чотирьох боків
+
     */
-
-    /*
-    object-fit: cover; --- елемент зберігає пропорції, але "обрізає" зайве
-    object-position: right; --- позиція картинки така, щоб захопити все справа
-    */
 }
 
-.cat-name {
-    display: inline
-}
 
-.cat-position {
-    display: block;
-}
-
-span {
+.inline-element {
     color: blue;
+    padding: 30px;
+    margin: 40px;
+    border: 1px solid black;
+    display: inline-block;
 }
+
+.cool-button {
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color: aqua;
+    border-radius: 8px;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(63, 114, 63);
+    border: 1px solid grey;
+    font-size: 20px;
+}
+
+/*
+1em = 1 розмір тексту батьківського елементу
+
+1rem = 1 розмір тексту root-(кореневого елементу)
+
+*/
+
+p {
+    font-size: 1em;
+}
+
+/*
+viewport - вікно перегляду - фізичний розмір видимої частини нашої сторінки
+
+1vw - viewport width - 1 доля ширини вьюпорта
+1vh - viewport height - 1 доля висоти вьюпорта
+
+
+*/
