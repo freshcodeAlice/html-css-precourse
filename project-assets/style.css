@@ -4,6 +4,14 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.site-header {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+}
+
+
+
 
 .logo {
     width: 65px;
