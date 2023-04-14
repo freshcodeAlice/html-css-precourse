@@ -1,112 +1,137 @@
-main {
-    width: 800px;
-    height: 2000px;
-    background-color: darksalmon;
+.parent {
+    height: 800px;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+   
 }
 
-
-.wrapper {
-    width: 700px;
-    height: 1200px;
-    background-color: darkgreen;
-    position: relative;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: blueviolet;
-    border: 2px solid black;
-    text-align: center;
+.child {
+    /* width: 100px;
+    height: 100px; */
+    border: 1px solid black;
+    background-color: darkslategray;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
+    text-align: center;
+
 }
 
-.first {
-    position: relative;
-    top:15px;
-    left: 15px;
-    z-index: 2;
-}
 
 .second {
-    position: fixed;
-   top: 100px;
-   left: 10px;
-   z-index: 4;
+    margin-left: auto; /* margin auto робить максимальний "стрибок" і відштовхує елемент у вказаному напрямку, якщо є куди */
 }
 
-.third {
-    position: absolute;
-   left: 20px;
-   top: 20px;
+.fifth {
+    margin-top: auto;
 }
-
-.fourth {
-    position: sticky;
-    top: 5px;
-}
-
 
 /*
-Position
-Позиціонування - задання елементу певної позиції відносно інших елементів або його місця в потоці, або вьюпорта
+Flexible box layout - технологія CSS, яка дозволяє керувати елементами всередині флекс-батька (або флекс-контейнер)
 
-static - не позиціонований елемент (defult)
+display: flex - вмикає режим флекс-контейнера
 
-relative - відносне позиціонування. Елемент позиціонується відного свого нормального місця у потоці. Всі інші елементи поводять себе так, ніби він там і є. Top, right, left, bottom здвигають елемент відносно його місця в потоці
-
-fixed - абсолютне позиціонування відносно вьюпорта.
-Top, right, left, bottom розміщують елемент відносно границь вьюпорта
-
-absolute - абсолютне позиціонування відносно найближчого нестатичного батьківского елемента. Якщо жоден батьківський елемент в ієрархії не має позиціонування (у всіх position: static), то найближчий позиціонований елемент - це <body>. Відного його початку координат ми і почнемо рахувати сдвиг top, left, right, bottom
-
-
-sticky - "липкий" тип позиціонування. Коли контейнер (батьківський елемент, який його містить) прокрутиться до вказаної величини (наприклад, top: 5px - поки до top елемента не залишиться 5px)  "залипне в цьому місці"
+flex-direction - напрямок головної осі
+row - main axis зліва направо (відповідно across axis зверху вниз)
+column - main axis зверху вниз (відповідно across axis зліва направо)
+row-reverse -  main axis зправа наліво 
 
 
 
-top, left, right, bottom
+justify-content - Вирівнювання дітей по головній осі
+    - flex-start (default) - на початку осі
+    - center - по центру осі
+    - flex-end - в кінці осі
+    - space-between: 
+        X...X...X...X...X
+    - space-around:
+        .X..X..X..X..X.
+    - space-evenly: 
+        .X.X.X.X.X.
 
-z-index - Властивість, що вказує, в якому порядку елементи перекривають одне одного, якщо перекривають
 
+align-items - вирівнювання за побічною віссю
+
+flex-wrap - перенос рядків, якщо елементи не поміщаються всі в один рядок
+
+
+align-content - вирівнювання рядків за побічною віссю
+(ця властивість конфліктує з align-items)
 
 */
 
 
 
-.modal-window {
-    width: 300px;
-    height: 300px;
-    background-color: white;
-    position: fixed;
-    top: 40%;
-    left: 40%;
-    z-index: 10;
+/*
+Flex child
+
+
+order - порядок елементів в потоці
+Чим більший ордер (порядковий номер) тим далі іде елемент в потоці сіблінгів
+Елементи з однаковим ордером вишикуються згідно свого нормального місця в потоці (хто за ким в нормі мав би йти).
+
+
+align-self - розташування себе (! це для самої дитини) згідно побічної осі батька
+
+flex
+flex-basis - базовий (теоретичний) розмір елемента вздовг головної осі батька
+flex-grow - коефіцієнт зросту елемента (якщо у батьківського елементу достатньо вільного місця по головній осі)
+flex-shrink - коефіцієнт зменшення (стиснення) елементу (якщо по головній осі не вистає місця навіть на flex-basis елемента)
+
+*/
+
+.child {
+    flex-basis: 120px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+   /* flex: grow shrink basis; */
+   flex: 1;
 }
 
-.black-screen {
-    background-color: rgba(0, 0, 0, 0.757);
-    z-index: 9;
-    /* width: 100vw;
-    height: 100vh; */
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    position: fixed;
+
+.two {
+    /* order: 2; */
+    /* align-self: stretch; */
+    flex-grow: 2;
+}
+
+.one {
+    /* order: 2; */
 }
 
 
 /*
-Border-box
-*/
+розмір батька = 1000px
+5 childs
+flex-basis = 100px
+вільне місце = 1000 - 5*100 = 500px
 
-.box {
-    width: 200px;
-    height: 200px;
-    background-color: green;
-    border: 5px solid black;
-    box-sizing: border-box; /* розмір контенту = ширина - бордери - паддінги*/
-    padding: 5px;
-}
+child   child   child   child   child 
+1       1        1      1       1
+1*100   1*100   1*100   1*100   1*100
+f-b+100 f-b+100 f-b+100 f-b+100 f-b+100
+
+сума коефіцієнтів = 1+1+1+1+1 = 5
+вільне місце / 5 = 100px; 
+
+
+Випадок 2:
+розмір батька = 1000px
+5 childs
+flex-basis = 100px
+вільне місце = 1000 - 5*100 = 500px
+
+child   child   child   child   child 
+1       2        1      1       1
+1*83.3   2*83.3   1*83.3   1*83.3   1*83.3
+f-b+83 f-b+166 f-b+83 f-b+83 f-b+83
+
+сума коефіцієнтів = 1+2+1+1+1 = 6
+вільне місце / 6 = 83.3px; 
+
+
+
+*/

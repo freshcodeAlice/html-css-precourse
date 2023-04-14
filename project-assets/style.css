@@ -8,6 +8,10 @@ body {
     width: 100%;
     position: fixed;
     top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
 }
 
 
@@ -18,18 +22,16 @@ body {
     height: 65px;
 }
 
-nav {
-    display: inline-block;
-}
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
-.menu-list, .menu-item {
-    display: inherit;
-    font-size: 20px;
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 
