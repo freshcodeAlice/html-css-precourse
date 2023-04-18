@@ -1,137 +1,40 @@
-.parent {
-    height: 800px;
-    border: 2px solid green;
+.wrapper {
+    width: 100%;
+    border: 2px solid black;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-   
 }
 
-.child {
-    /* width: 100px;
-    height: 100px; */
+.box {
     border: 1px solid black;
-    background-color: darkslategray;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-
-}
-
-
-.second {
-    margin-left: auto; /* margin auto робить максимальний "стрибок" і відштовхує елемент у вказаному напрямку, якщо є куди */
-}
-
-.fifth {
-    margin-top: auto;
-}
-
-/*
-Flexible box layout - технологія CSS, яка дозволяє керувати елементами всередині флекс-батька (або флекс-контейнер)
-
-display: flex - вмикає режим флекс-контейнера
-
-flex-direction - напрямок головної осі
-row - main axis зліва направо (відповідно across axis зверху вниз)
-column - main axis зверху вниз (відповідно across axis зліва направо)
-row-reverse -  main axis зправа наліво 
-
-
-
-justify-content - Вирівнювання дітей по головній осі
-    - flex-start (default) - на початку осі
-    - center - по центру осі
-    - flex-end - в кінці осі
-    - space-between: 
-        X...X...X...X...X
-    - space-around:
-        .X..X..X..X..X.
-    - space-evenly: 
-        .X.X.X.X.X.
-
-
-align-items - вирівнювання за побічною віссю
-
-flex-wrap - перенос рядків, якщо елементи не поміщаються всі в один рядок
-
-
-align-content - вирівнювання рядків за побічною віссю
-(ця властивість конфліктує з align-items)
-
-*/
-
-
-
-/*
-Flex child
-
-
-order - порядок елементів в потоці
-Чим більший ордер (порядковий номер) тим далі іде елемент в потоці сіблінгів
-Елементи з однаковим ордером вишикуються згідно свого нормального місця в потоці (хто за ким в нормі мав би йти).
-
-
-align-self - розташування себе (! це для самої дитини) згідно побічної осі батька
-
-flex
-flex-basis - базовий (теоретичний) розмір елемента вздовг головної осі батька
-flex-grow - коефіцієнт зросту елемента (якщо у батьківського елементу достатньо вільного місця по головній осі)
-flex-shrink - коефіцієнт зменшення (стиснення) елементу (якщо по головній осі не вистає місця навіть на flex-basis елемента)
-
-*/
-
-.child {
-    flex-basis: 120px;
+    background-color: blue;
     flex-grow: 1;
-    flex-shrink: 1;
-
-   /* flex: grow shrink basis; */
-   flex: 1;
 }
 
 
-.two {
-    /* order: 2; */
-    /* align-self: stretch; */
-    flex-grow: 2;
-}
-
-.one {
-    /* order: 2; */
+@media screen and (max-width: 2000px) {
+    .box {
+    
+        background-color: brown;
+    }
 }
 
 
-/*
-розмір батька = 1000px
-5 childs
-flex-basis = 100px
-вільне місце = 1000 - 5*100 = 500px
 
-child   child   child   child   child 
-1       1        1      1       1
-1*100   1*100   1*100   1*100   1*100
-f-b+100 f-b+100 f-b+100 f-b+100 f-b+100
+@media screen and (max-width: 300px) {
 
-сума коефіцієнтів = 1+1+1+1+1 = 5
-вільне місце / 5 = 100px; 
+    .wrapper {
+        flex-direction: column;
 
+    }
 
-Випадок 2:
-розмір батька = 1000px
-5 childs
-flex-basis = 100px
-вільне місце = 1000 - 5*100 = 500px
+    .box {
+        width: auto;
+        background-color: green;
+        color: white;
+    }
 
-child   child   child   child   child 
-1       2        1      1       1
-1*83.3   2*83.3   1*83.3   1*83.3   1*83.3
-f-b+83 f-b+166 f-b+83 f-b+83 f-b+83
-
-сума коефіцієнтів = 1+2+1+1+1 = 6
-вільне місце / 6 = 83.3px; 
-
-
-
-*/
+    .third {
+        display: none;
+    }
+}
