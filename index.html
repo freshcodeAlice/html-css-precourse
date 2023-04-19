@@ -10,13 +10,85 @@
 
 </head>
 <body>
-  <section class="wrapper">
-    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In commodi dolore itaque sed assumenda. Repudiandae eius minus saepe cumque voluptatibus ullam architecto accusamus, nesciunt illo eligendi. Voluptates id accusantium unde perferendis itaque nostrum, corrupti aut placeat, exercitationem similique, qui neque excepturi? Illum obcaecati delectus cum magnam ipsam aliquam sed voluptates.</div>
-    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nulla neque exercitationem delectus earum nobis modi at sapiente quasi iste accusamus, beatae eum nam id aliquam doloremque ad et dolore minima a nisi expedita quas dolorem! Expedita iure, consequatur et, voluptatibus exercitationem sed repellendus commodi dolore nihil quis, adipisci eos?</div>
-    <div class="box third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nulla rem explicabo voluptas, ipsa earum magni nihil! Earum esse ex vero saepe, in, impedit ea quae perspiciatis, molestiae cumque ut consequatur itaque! Quis ut impedit nam praesentium esse magnam ipsum, explicabo obcaecati ducimus dicta doloribus aliquid mollitia deserunt ab dolor.</div>
-    <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio in, error laborum quas hic mollitia, asperiores accusantium omnis delectus dolor blanditiis ea eaque officia nesciunt explicabo, reprehenderit natus eius fugit libero voluptatibus nemo molestias. Officiis tempora qui laudantium illum, dignissimos, impedit incidunt dolorem quam, nihil exercitationem id placeat natus maxime!</div>
-    <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam id rem impedit cum eum commodi provident corrupti, nisi expedita voluptates ipsa reiciendis laudantium officiis laborum magni saepe vitae dolores iste qui culpa dignissimos quibusdam minima veniam magnam? Exercitationem architecto illo cumque, enim, doloremque repellat molestias at cupiditate dolore ipsum aspernatur.</div>
-  </section>
+  <form>
+    <label>
+      Введіть своє ім'я
+    </label>
+      <input type="text" placeholder="Введіть своє ім'я"/>
+
+
+    <label for="email">Введіть свій мейл</label>
+    <input type="email" placeholder="example@test.com" id="email"/>
+    <input type="password" placeholder="Введіть свій пароль" id="pass"/>
+
+    <label>
+      Введіть номер телефону
+    </label>
+      <input type="tel" placeholder="+380123456"/>
+
+
+    <label>
+      <input type="checkbox" class="check"/>  
+      Чи є вам 18 років?
+  
+    </label>
+
+    <label>
+      <input type="checkbox"/>  
+      Чи прочитали ви умови договору дрібним текстом?
+  
+    </label>
+    Оберіть стать
+    <label>
+    <input type="radio" name="gender" /> Male
+    </label>
+    <label>
+    <input type="radio" name="gender" /> Female
+    </label>
+    <label>
+    <input type="radio" name="gender" /> Non-binary
+  </label>
+  
+  <label>
+    Оберіть колір
+    <input type="color" />
+  </label>
+
+  <label>
+    Оберіть дату
+    <input type="date" />
+    <input type="datetime-local">
+  </label>
+  <label>
+    Діапазон
+    <input type="range" min="1" max="100" />
+  </label>
+  <label>
+    Картинка
+    <input type="image" />
+  </label>
+  <label class="label-input-file">
+    Файл
+    <input type="file"/>
+  </label>
+  <textarea></textarea>
+  
+  <label>
+    Обери, з якого ти міста
+    <select>
+      <option>Київ</option>
+      <option>Харків</option>
+      <option>Дніпро</option>
+      <option>Донецьк</option>
+      <option>Одеса</option>
+      <option>Львів</option>
+      <option>Сімферополь</option>
+      <option>Тернопіль</option>
+    </select>
+  </label>
+
+  <button>Submit</button>
+  </form>
 </body>
 </html>
 

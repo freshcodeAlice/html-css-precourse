@@ -1,40 +1,61 @@
-.wrapper {
-    width: 100%;
-    border: 2px solid black;
+body {
+    background-color: blanchedalmond;
+}
+
+form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    max-width: 23vw;
+    border: 1px solid grey;
+    padding: 2%;
+    margin: 0 auto;
 }
 
-.box {
-    border: 1px solid black;
+label {
+    margin-top: 2%;
+}
+
+.check {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: blueviolet;
+    border-radius: 1px;
+}
+
+.check:checked {
+    background-color: forestgreen;
+}
+
+button {
+    background-color: bisque;
+}
+
+button:hover {
     background-color: blue;
-    flex-grow: 1;
+}
+
+input[type="file"] {
+   display: none;
+}
+
+.label-input-file {
+    background-color: blanchedalmond;
+}
+
+input {
+    height: 1.5rem;
 }
 
 
-@media screen and (max-width: 2000px) {
-    .box {
-    
-        background-color: brown;
-    }
+input::placeholder {
+    color: green;
 }
 
 
-
-@media screen and (max-width: 300px) {
-
-    .wrapper {
-        flex-direction: column;
-
-    }
-
-    .box {
-        width: auto;
-        background-color: green;
-        color: white;
-    }
-
-    .third {
-        display: none;
-    }
+#email {
+    border: none;
+    margin: 2% 0;
+    background-color: transparent;
+    border-bottom: 2px solid black;
 }
