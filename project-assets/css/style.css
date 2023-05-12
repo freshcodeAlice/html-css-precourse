@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Common styles */
+/* Загальні стильові правила, які зустрічаються на сторінці часто, можна винести в окремі селектори для зменшення коду та можливості перевикористовувати їх в різних місцях сторінки (Як, наприклад, обмеження максимальної ширини певних блоків, які займають 75% екрану і стоять посередині (блоки сцени, подарунків, форми підписки) */
+
+
+.max-width-wrapper {
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* Buttons */
+/* Стилі кнопок */
+
+
+.menu-button {
+    background-color: #7AE5FD;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 80px;
+    text-transform: uppercase;
+}
+
+
+.button {
+    font-size: 1.1rem;
+    padding: 1.3rem 2.1rem;
+    display: block;
+    margin: 5vh auto;
+}
+
+
+
+/* Header */
+/* Хедер (з меню) */
+
+.site-header {
+    width: 100%;
+    position: fixed;
+    top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.125rem;
+    /* Якщо rem = 16px, то розмір шрифта хедеру будe 18px*/
+    padding: 0 2%;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+
+.logo {
+    width: 65px;
+    height: 65px;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-item {
+    margin: 0 1em;
+}
+
+
+
+/* First screen */
+/* Перший екран з заголовком сайту і картинкою дівчини з прапором */
+
+
+
+.first-screen {
+    max-width: 100vw;
+    height: 100vh;
+    background-color: #F1FDFF;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+}
+
+.heading-first-screen {
+    font-size: 6.5rem;
+    color: #9AD2DE;
+    font-weight: 800;
+
+    letter-spacing: -2%;
+}
+
+.first-screen-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-left: 3%;
+}
+
+.subheading-first-screen {
+    font-size: 1.5rem;
+    width: 80%;
+    margin-top: 8%;
+}
+
+.woman-first-screen {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    z-index: 2;
+    object-fit: cover;
+}
+
+.curve {
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+/* Program */
+/* Секція з програмою виступів. Заголовок */
+
+.program-header {
+    margin: 15vh auto 10vh;
+    /* Для відступів, що формують висоту елементів, краще за все використовувати відносні одиниці вьюпорта. Так пропорції зберігатимуться відносно розмірів екрану*/
+    text-align: center;
+    font-size: 1.25rem;
+    /* Фіксуємо 20px як розмір тексту цього блоку, заголовки в цьому блоці вираховуватимуть свої розміри від нього */
+}
+
+.program-header h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 0.3em;
+}
+
+.program-header h3 {
+    font-size: 1.35em;
+
+}
+
+.program-header p {
+    max-width: 60%;
+    color: #73A6B1;
+    margin: 1em auto;
+    font-family: 'Montserrat';
+}
+
+/* Scene section */
+/* Програма виступів - Сцени */
+
+.scene-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F1FDFF;
+    border-radius: 10px;
+    padding: 5%;
+    margin: 3% auto;
+    font-size: 1rem;
+}
+
+
+.scene-name {
+    font-size: 2.875em;
+}
+
+.program-wrapper h2+p {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+}
+
+
+/*
+
+Якщо б в макеті сцени була однакова кількість елементів, то можна було би використати розрівнювання флексами, оскільки тоді елементи рівномірно розподілялися в просторі батьківського елементу.
+Тоді можна було би використати ось такий прийом:
+Батьківський флекс-контейнер задає розмір дочірньому флекс-контейнеру за рахунок висоти картинки, а дочірній "зростає" на весь доступний простір та займає ширину, яка лишилась від картинки. Таким чином сам контейнер отримує розміри, і всередині нього всі елементи списку можна рівномірно розподілити через space-evenly.
+
+.program-wrapper {
+     display: flex;
+    flex-direction: column; 
+} 
+
+ .program-wrapper ul {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} 
+*/
+
+/* Але нажаль, реальність макету така, що в секціях сцени різна кількість елементів (десь в програмі 4 учасники, десь 6, десь 5) тож єдиний спосіб впоратись в такій ситуації - просто давати елементам однакові відступи (що пропорційно залежатимуть від розміру тексту) */
+
+.program-wrapper ul li {
+    margin-top: 3.125em;
+}
+
+.program-line {
+    margin-bottom: 0.4em;
+}
+
+.program-time {
+    color: #3D8C9D;
+}
+
+
+
+.program-scene-img {
+    border-radius: 10px;
+    align-self: center;
+    max-width: 55%;
+}
+
+
+
+/* Gift section */
+/* Секція подарунків */
+
+
+.gift {
+    margin: 25vh 0;
+    padding: 3vh 0;
+    position: relative;
+}
+
+.curve-gift {
+    position: absolute;
+    top: -50%;
+    left: 8%;
+    width: 85%;
+}
+
+.blue-wrapper {
+    background-color: #F1FDFF;
+    border-radius: 10px;
+    padding: 6% 3%;
+    margin-top: 3%;
+    position: relative;
+}
+
+.gift-header {
+    max-width: 40%;
+    line-height: 2rem;
+    font-size: 1.68rem;
+}
+
+.gift-shirt {
+    position: absolute;
+    top: -25%;
+    right: 5%;
+    width: 30%;
+}
+
+.gift-flag {
+    position: absolute;
+    width: 20%;
+    right: 0;
+    top: -2%;
+}
+
+/* Counter */
+/* Секція з лічильником коштів */
+
+.counter {
+    margin: 5vh 0;
+    text-align: center;
+    font-size: 1.25rem;
+    /* Фіксуємо розмір тексту для блоку у 20px */
+}
+
+.counter h2 {
+    font-size: 3em;
+    /* Заголовки пропорційно розміру тексту */
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+
+.counter h3 {
+    font-size: 1.35em;
+    margin: 3.5em 0 1em;
+}
+
+.description {
+    color: #73A6B1;
+    max-width: 50%;
+    text-align: inherit;
+    /* Вказуємо елементу, що він має унаслідувати розташування текусту у батьківського елементу */
+    margin: 0 auto;
+}
+
+.counter .number {
+    font-size: 3em;
+    border-left: 3px solid #9AD2DE;
+    padding: 0 0.15em;
+}
+
+.number:first-of-type {
+    border: none;
+}
+
+/* Footer */
+/* Секція футера */
+
+footer {
+    background-color: #F9FADF;
+    background-image: url('../img/Фон6.png');
+    background-repeat: no-repeat;
+    padding: 5% 1%;
+    margin-top: 13vh;
+    font-size: 1.25rem;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+}
+
+.contacts h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    max-width: 35%;
+    line-height: 1.2em;
+    margin-left: 25%;
+}
+
+.contact-messenger {
+    margin-top: 15%;
+}
+
+.telnum {
+    display: block;
+    font-weight: 700;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+    background-color: white;
+}
+
+.subscribe-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.subscribe-text {
+    font-size: 1.35em;
+    line-height: 1.18em;
+    margin-bottom: 5%;
+}
+
+.mail-img {
+    max-width: 40%;
+    object-fit: cover;
+}
+
+.subscribe-button {
+    font-size: 1em;
+}
+
+.subscribe-wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-wrapper input {
+    font-size: 1em;
+    padding: 1em 2em;
+    background-color: #F9FADF;
+    border: none;
+    border-radius: 60px;
+    margin-bottom: 6%;
+}
+
+.subscribe-wrapper input::placeholder {
+    color: black;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+
+    .logo, .menu-list, .curve-gift {
+        display: none;
+    }
+
+    /* Header */ 
+
+    .first-screen-wrapper,
+    .program-header p, 
+    .gift-header, 
+    .contact-info, 
+    .subscribe-wrapper, 
+    .mail-img, 
+    .counter .description {
+        max-width: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+        width: 40px;
+    }
+
+    .site-header {
+        justify-content: flex-end;
+        top: 0;
+    }
+
+    /* First screen */
+
+    .heading-first-screen {
+        font-size: 3.125rem;
+    }
+
+    .subheading-first-screen {
+        font-size: 1rem;
+    }
+
+    .first-screen {
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow: hidden;
+        padding-top: 20%;
+    }
+
+    .woman-first-screen {
+        position: relative;
+        width: 100%;
+        height: 60%;
+    }
+
+    .curve {
+        position: absolute;
+        bottom: -5%;
+        left: 0;
+        width: 180%;
+        z-index: 0;
+    }
+
+    /* Program & scene */
+
+    .scene-wrapper {
+
+        flex-direction: column-reverse;
+        margin-bottom: 7%;
+    }
+
+    .program-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .program-scene-img {
+        max-width: 100%;
+        margin-bottom: 15%;
+    }
+
+    /* Gift */
+
+    .gift {
+        margin: 20vh 0 10vh;
+    }
+
+    .gift-header {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .gift-shirt {
+        width: 100%;
+    }
+
+    .gift-flag {
+        position: relative;
+        width: 50%;
+        left: 50%;
+    }
+
+    /* Counter */
+
+    .program-header h2, .counter h2, .contacts h2 {
+        font-size: 3.125rem;
+    }
+
+
+    .counter {
+        margin: 0;
+        text-align: start;
+        padding: 3%;
+    }
+
+    .counter h3 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .counter .number {
+        padding: 0 3px;
+    }
+    
+
+    /* Footer */
+
+    footer {
+        margin-top: 3vh;
+        font-size: 1rem;
+        padding-top: 10%;
+    }
+
+    .subscribe, .contacts {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-left: 0;
+        margin-top: 15%;
+    }
+
+    .contacts {
+        margin: 0;
+        padding: 5%;
+    }
+
+    .subscribe {
+        margin-top: 10%;
+    } 
+
+    .mail-img {
+        width: 100%;
+    }
+    .subscribe-text {
+        margin: 20% 0;
+    }
+
+    .subscribe-wrapper input {
+        margin-bottom: 10%;
+    }
+    
+}

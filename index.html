@@ -1,94 +1,194 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="./assets/style.css">
-
+    <title>Фестиваль перемоги України</title>
+    <link rel="stylesheet" href="./project-assets/css/reset.css">
+    <link rel="stylesheet" href="./project-assets/css/style.css">
 </head>
+
 <body>
-  <form>
-    <label>
-      Введіть своє ім'я
-    </label>
-      <input type="text" placeholder="Введіть своє ім'я"/>
+    <header class="site-header ">
+        <img src="./project-assets/icons/Subtract.png" class="logo" />
+        <ul class="menu-list">
+            <li class="menu-item"><a href="#">Контакти</a></li>
+            <li class="menu-item"><a href="#">Головна</a></li>
+            <li class="menu-item"><a href="#">Программа</a></li>
+            <li class="menu-item menu-button"><a href="#">Як потрапити</a></li>
+        </ul>
+        <img src="./project-assets/icons/icons8-menu-48.png" class="hamburger-icon" />
+    </header>
+    <section class="first-screen">
+        <article class="first-screen-wrapper">
+            <h1 class="heading-first-screen uppercase">
+                Фестиваль Перемоги України
+            </h1>
+            <p class="subheading-first-screen">
+                Свято для усіх українців, які працювали, боролися й вірили у перемогу
+            </p>
+        </article>
+        <img src="./project-assets/img/medium-shot-woman-holding-ukranian-flag 1.png" class="woman-first-screen"
+            alt="woman hold ukrainian flag" />
+        <img src="./project-assets/img/Фон.png" class="curve" />
+    </section>
+    <main>
+        <section class="programm">
+            <div class="program-header">
+                <h2>Програма фестивалю</h2>
+                <h3>3 сцени, щоб добре й із задоволенням провести час</h3>
+                <p>Усі сцени розташовані так, щоб вам було зручно ходити між ними, і вони одна одну не глушили</p>
+            </div>
+            <article class="max-width-wrapper scene-wrapper">
+                <div class="program-wrapper">
+                    <h2 class="scene-name uppercase">Сцена Перемоги</h2>
+                    <p>Розбудова України після війни</p>
+                    <ul>
+                        <li>
+                            <p class="program-line">Виступ Президента України</p>
+                            <span class="program-time">10:00-12:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Виступ представників ЄС</p>
+                            <span class="program-time">13:00-14:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Виступ представників НАТО</p>
+                            <span class="program-time">14:00-15:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Гімн України</p>
+                            <span class="program-time">21:25-21:30</span>
+                        </li>
+                    </ul>
+                </div>
+                <img src="./project-assets/img/Сцена1.png" alt="Сцена перемоги" class="program-scene-img" />
+            </article>
 
+            <article class="max-width-wrapper scene-wrapper">
+                <div class="program-wrapper">
+                    <h2 class="scene-name uppercase">Сцена "Музика"</h2>
+                    <ul>
+                        <li>
+                            <p class="program-line">Артем Квасоваров</p>
+                            <span class="program-time">14:00-15:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Степан Мега</p>
+                            <span class="program-time">16:00-17:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Гурт “Протитіла”</p>
+                            <span class="program-time">17:00-18:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Віктор Петрик</p>
+                            <span class="program-time">18:00-19:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Гурт “Діти Електриків”</p>
+                            <span class="program-time">19:00-20:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Гурт “Надвірна”</p>
+                            <span class="program-time">20:00-21:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <img src="./project-assets/img/Сцена2.png" alt="Сцена перемоги" class="program-scene-img" />
+            </article>
 
-    <label for="email">Введіть свій мейл</label>
-    <input type="email" placeholder="example@test.com" id="email"/>
-    <input type="password" placeholder="Введіть свій пароль" id="pass"/>
+            <article class="max-width-wrapper scene-wrapper">
+                <div class="program-wrapper">
+                    <h2 class="scene-name uppercase">Сцена "Майстер-класи для дітей"</h2>
+                    <ul>
+                        <li>
+                            <p class="program-line">Музей науки</p>
+                            <span class="program-time">14:00-15:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Майстер-клас з ліплення</p>
+                            <span class="program-time">16:00-17:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Майстер-клас з машинобудування</p>
+                            <span class="program-time">17:00-18:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Майстер-клас з роботехінки</p>
+                            <span class="program-time">18:00-19:00</span>
+                        </li>
+                        <li>
+                            <p class="program-line">Майстер-клас з малювання хною</p>
+                            <span class="program-time">19:00-20:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <img src="./project-assets/img/Сцена3.png" alt="Сцена перемоги" class="program-scene-img" />
+            </article>
+            <button class="menu-button button">Дізнатися більше</button>
 
-    <label>
-      Введіть номер телефону
-    </label>
-      <input type="tel" placeholder="+380123456"/>
+        </section>
+        <section class="gift">
+            <img src="./project-assets/img/Фон5.png" class="curve-gift" />
+            <div class="max-width-wrapper blue-wrapper">
+                <img src="./project-assets/img/430 copy 1.png" class="gift-shirt" />
+                <img src="./project-assets/img/image_556 1.png" class="gift-flag" />
+                <h2 class="gift-header">Кожен учасник фестивалю отримає прапор України та футболку з гербом</h2>
+            </div>
 
+        </section>
+        <section class="counter">
+            <h2>Як потрапити</h2>
+            <p class="description">Фестиваль безкоштовний. Будемо збирати пожертви для відбудови зруйнованих українських
+                міст та сіл.</p>
+            <h3>Наша мета 10 000 000 гривень! </h3>
+            <p>
+                <span class="number">00</span>
+                <span class="number">230</span>
+                <span class="number">025</span>
+            </p>
+            <button class="menu-button button">Зробити пожертву</button>
 
-    <label>
-      <input type="checkbox" class="check"/>  
-      Чи є вам 18 років?
-  
-    </label>
+        </section>
+    </main>
+    <footer>
+        <section class="max-width-wrapper contacts">
+            <h2>Контакти</h2>
+            <article class="contact-info">
+                <div>
+                    <img src="./project-assets/icons/Phone.png" />
+                    <p>
+                        Якщо у вас виникають питання –
+                        телефонуйте за номером
+                        <span class="telnum">0-987-654-321</span>
+                    </p>
+                </div>
+                <div class="contact-messenger">
+                    <img src="./project-assets/icons/TelegramLogo.png" />
+                    <img src="./project-assets/icons/WhatsappLogo.png" />
+                    <p>
+                        Або пишіть нам у чат-бот
+                    </p>
+                </div>
+            </article>
+          
+        </section>
+        <section class="max-width-wrapper subscribe">
+            <img src="./project-assets/img/Емейл.png" class="mail-img"/>
+            <div class="subscribe-wrapper">
+                <p class="subscribe-text">Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку</p>
+                <form>
+                    <input type="text" placeholder="Ім'я"/>
+                    <input type="email" placeholder="Емейл"/>
+                    <button class="menu-button subscribe-button">Підписатися</button>
+                </form>
+            </div>
 
-    <label>
-      <input type="checkbox"/>  
-      Чи прочитали ви умови договору дрібним текстом?
-  
-    </label>
-    Оберіть стать
-    <label>
-    <input type="radio" name="gender" /> Male
-    </label>
-    <label>
-    <input type="radio" name="gender" /> Female
-    </label>
-    <label>
-    <input type="radio" name="gender" /> Non-binary
-  </label>
-  
-  <label>
-    Оберіть колір
-    <input type="color" />
-  </label>
-
-  <label>
-    Оберіть дату
-    <input type="date" />
-    <input type="datetime-local">
-  </label>
-  <label>
-    Діапазон
-    <input type="range" min="1" max="100" />
-  </label>
-  <label>
-    Картинка
-    <input type="image" />
-  </label>
-  <label class="label-input-file">
-    Файл
-    <input type="file"/>
-  </label>
-  <textarea></textarea>
-  
-  <label>
-    Обери, з якого ти міста
-    <select>
-      <option>Київ</option>
-      <option>Харків</option>
-      <option>Дніпро</option>
-      <option>Донецьк</option>
-      <option>Одеса</option>
-      <option>Львів</option>
-      <option>Сімферополь</option>
-      <option>Тернопіль</option>
-    </select>
-  </label>
-
-  <button>Submit</button>
-  </form>
+        </section>
+    </footer>
 </body>
-</html>
 
+</html>
